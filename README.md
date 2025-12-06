@@ -1,8 +1,18 @@
+---
+title: CV-to-Job-Description Matcher
+emoji: 🔍
+colorFrom: blue
+colorTo: purple
+sdk: streamlit
+sdk_version: "1.52.1"
+app_file: app.py
+pinned: false
+license: mit
+---
+
 # CV-to-Job-Description Matcher
 
 AI-powered match scoring & skill-gap reporting system that helps job applicants understand how well their CV matches job descriptions.
-
-**🚀 Live Demo**: [Deploy on Hugging Face Spaces](#deployment) | [Deploy on Render](#deployment)
 
 ## Features
 
