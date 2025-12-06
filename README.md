@@ -2,6 +2,8 @@
 
 AI-powered match scoring & skill-gap reporting system that helps job applicants understand how well their CV matches job descriptions.
 
+**🚀 Live Demo**: [Deploy on Hugging Face Spaces](#deployment) | [Deploy on Render](#deployment)
+
 ## Features
 
 - 📄 **Document Upload**: Support for PDF, DOCX, and TXT files
@@ -56,53 +58,32 @@ streamlit run app.py
 
 4. Open your browser and navigate to `http://localhost:8501`
 
-## Deployment on Render
+## Deployment
 
-### Step 1: Push to GitHub
+### Option 1: Hugging Face Spaces (Recommended)
 
-1. Initialize git repository (if not already):
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-```
+**Quick Deploy:**
+1. Go to [Hugging Face Spaces](https://huggingface.co/spaces)
+2. Click "Create new Space"
+3. Select **Streamlit** as SDK
+4. Connect your GitHub repository or push code directly
+5. Add `GOOGLE_AI_API_KEY` in Space settings (optional, for AI features)
+6. Your app will be live in 2-5 minutes!
 
-2. Create a new repository on GitHub and push:
-```bash
-git remote add origin <your-github-repo-url>
-git branch -M main
-git push -u origin main
-```
+**Detailed Instructions:** See [DEPLOYMENT_HF.md](DEPLOYMENT_HF.md)
 
-### Step 2: Deploy on Render
+### Option 2: Render
 
 1. Go to [Render Dashboard](https://dashboard.render.com/)
-2. Click "New +" and select "Web Service"
+2. Click "New +" → "Web Service"
 3. Connect your GitHub repository
-4. Configure the service:
-   - **Name**: cv-job-matcher (or your preferred name)
-   - **Environment**: Python 3
+4. Configure:
    - **Build Command**: `pip install -r requirements.txt`
    - **Start Command**: `streamlit run app.py --server.port=$PORT --server.address=0.0.0.0`
-   - **Plan**: Free (or choose a paid plan)
+5. Add environment variable: `GOOGLE_AI_API_KEY` (optional)
+6. Deploy!
 
-5. Add environment variables (if needed):
-   - `PORT`: 8501 (usually set automatically)
-
-6. Click "Create Web Service"
-
-7. Wait for deployment to complete (usually 2-5 minutes)
-
-8. Your app will be available at: `https://cv-job-matcher.onrender.com` (or your custom domain)
-
-### Alternative: Using render.yaml
-
-If you've included `render.yaml` in your repository:
-
-1. Go to Render Dashboard
-2. Click "New +" and select "Blueprint"
-3. Connect your GitHub repository
-4. Render will automatically detect and use the `render.yaml` configuration
+**Detailed Instructions:** See [DEPLOYMENT.md](DEPLOYMENT.md)
 
 ## Usage
 
