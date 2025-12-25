@@ -39,7 +39,7 @@ class GeminiClient:
         
         # Primary model: Gemini 2.0 Flash (experimental - latest)
         # Try gemini-2.0-flash-exp first, fallback to gemini-1.5-flash if not available
-        self.primary_model = "gemini-2.0-flash-exp"
+        self.primary_model = "gemini-3-pro-preview"
         # Fallback model: Gemini 1.5 Flash (stable)
         self.fallback_model = "gemini-1.5-flash"
         
